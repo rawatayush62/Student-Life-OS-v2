@@ -1,0 +1,248 @@
+@import './theme.css';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-body);
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  background-color: var(--bg-app);
+}
+
+/* ─────────────────────────────────────────────────────
+   TYPOGRAPHY SYSTEM
+   Display font (headings) = theme-aware personality font
+   Body font = DM Sans / Inter — always readable
+   Stat font = Space Grotesk / Inter — numbers & data
+   ───────────────────────────────────────────────────── */
+
+/* Headings use display font — personality + readability */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: var(--font-section-title-tracking, -0.02em);
+  color: var(--text-main);
+}
+
+/* Page-level title (e.g. dashboard section header, modal title) */
+.page-title {
+  font-family: var(--font-display);
+  font-size: var(--font-page-title-size);
+  font-weight: var(--font-page-title-weight);
+  letter-spacing: var(--font-page-title-tracking);
+  line-height: 1.1;
+}
+
+/* Section titles */
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--font-section-title-size);
+  font-weight: var(--font-section-title-weight);
+  letter-spacing: var(--font-section-title-tracking);
+  line-height: 1.2;
+}
+
+/* Stat values — hours, streaks, percentages, timers */
+.font-stat {
+  font-family: var(--font-stat);
+  font-size: var(--font-stat-size);
+  font-weight: var(--font-stat-weight);
+  letter-spacing: var(--font-stat-tracking);
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+/* Microcopy — always body font, never display */
+.microcopy {
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* Inline stat spans that don't need block layout */
+.stat-inline {
+  font-family: var(--font-stat);
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+/* Display font applied explicitly when needed outside headings */
+.font-display {
+  font-family: var(--font-display);
+}
+
+p {
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+}
+
+button, input, textarea, select {
+  font-family: var(--font-body);
+  font-size: inherit;
+  color: inherit;
+  outline: none;
+  border: none;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  transition: all var(--transition-normal);
+}
+
+/* Custom Clean Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-medium);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Clean Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUpModal {
+  from { opacity: 0; transform: scale(0.98) translateY(12px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 0.9; }
+  50% { opacity: 1; }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+.animate-modal-enter {
+  animation: slideUpModal 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Card Surface Utility */
+.app-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal), transform var(--transition-normal), background-color var(--transition-normal);
+}
+
+.app-card:hover {
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-md);
+}
+
+/* Semantic Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.badge-critical {
+  background: var(--color-important-subtle);
+  color: var(--color-important);
+  border: 1px solid var(--color-important);
+}
+
+.badge-warning {
+  background: var(--color-warning-subtle);
+  color: var(--color-warning);
+  border: 1px solid var(--color-warning);
+}
+
+.badge-secondary {
+  background: var(--color-secondary-subtle);
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+}
+
+.badge-primary {
+  background: var(--color-secondary-subtle);
+  color: var(--color-primary);
+  border: 1px solid var(--border-subtle);
+}
+
+/* 6 Life Pillars Badges */
+.badge-pillar-learn {
+  background: var(--color-secondary-subtle);
+  color: var(--pillar-learn);
+  border: 1px solid var(--border-subtle);
+}
+
+.badge-pillar-build {
+  background: rgba(99, 102, 241, 0.12);
+  color: var(--pillar-build);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.badge-pillar-move {
+  background: var(--color-success-subtle);
+  color: var(--pillar-move);
+  border: 1px solid rgba(105, 184, 156, 0.3);
+}
+
+.badge-pillar-connect {
+  background: var(--color-important-subtle);
+  color: var(--pillar-connect);
+  border: 1px solid rgba(240, 128, 128, 0.3);
+}
+
+.badge-pillar-explore {
+  background: var(--color-warning-subtle);
+  color: var(--pillar-explore);
+  border: 1px solid rgba(233, 185, 73, 0.3);
+}
+
+.badge-pillar-rest {
+  background: var(--color-secondary-subtle);
+  color: var(--pillar-rest);
+  border: 1px solid rgba(139, 124, 246, 0.3);
+}

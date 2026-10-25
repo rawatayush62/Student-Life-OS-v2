@@ -1,0 +1,266 @@
+/* ──────────────────────────────────────────────────
+   LIGHT MODE (Default) · Electric Purple, Hot Pink, Lime, Orange, Sky Blue
+   ────────────────────────────────────────────────── */
+:root, [data-theme="light"] {
+  color-scheme: light;
+
+  /* Backgrounds */
+  --bg-app: #FFFDF7;           /* Off-white */
+  --bg-secondary: #F8F6FF;     /* Subtle light purple tint */
+  --bg-card: #FFFFFF;          /* Pure White cards */
+  --bg-card-elevated: #FFFFFF;
+  --bg-card-hover: #FAF8F2;
+  --bg-input: #FFFFFF;
+  --bg-overlay: rgba(24, 24, 27, 0.45);
+
+  /* Primary Brand */
+  --color-primary: #7C3AED;       /* Electric Purple */
+  --color-primary-hover: #6D28D9;
+  --color-secondary: #7C3AED;     /* Electric Purple accent */
+  --color-secondary-hover: #6D28D9;
+  --color-secondary-subtle: #F3E8FF; /* Light purple tint */
+
+  /* Palette Accents */
+  --color-pink: #F43F8E;          /* Hot Pink */
+  --color-lime: #A3E635;          /* Lime */
+  --color-orange: #FB923C;        /* Orange */
+  --color-sky: #38BDF8;           /* Sky Blue */
+
+  /* Text */
+  --text-main: #18181B;       /* Almost Black */
+  --text-secondary: #71717A;  /* Gray */
+  --text-muted: #A1A1AA;
+  --text-inverse: #FFFFFF;
+
+  /* Semantic Mappings */
+  --color-warning: #FB923C;           /* Orange */
+  --color-warning-subtle: rgba(251, 146, 60, 0.15);
+  --color-important: #F43F8E;         /* Hot Pink */
+  --color-important-subtle: rgba(244, 63, 142, 0.12);
+  --color-success: #65A30D;           /* Lime Deep */
+  --color-success-subtle: rgba(163, 230, 53, 0.18);
+
+  /* Borders & Shadows */
+  --border-subtle: #E4E4E7;           /* Light gray */
+  --border-medium: #D4D4D8;
+  --border-primary: rgba(124, 58, 237, 0.25);
+  --border-accent: rgba(124, 58, 237, 0.35);
+
+  --shadow-sm: 0 1px 3px rgba(24, 24, 27, 0.05);
+  --shadow-card: 0 2px 8px rgba(24, 24, 27, 0.04), 0 1px 2px rgba(24, 24, 27, 0.02);
+  --shadow-md: 0 6px 16px rgba(24, 24, 27, 0.08);
+  --shadow-lg: 0 16px 36px rgba(24, 24, 27, 0.12);
+
+  /* 6 Life Pillar Colors (semantic) */
+  --pillar-learn:   #7C3AED;  /* Electric Purple */
+  --pillar-build:   #0284C7;  /* Sky Blue */
+  --pillar-move:    #65A30D;  /* Lime */
+  --pillar-connect: #F43F8E;  /* Hot Pink */
+  --pillar-explore: #EA580C;  /* Orange */
+  --pillar-rest:    #9333EA;  /* Purple */
+
+  /* Radius */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 350ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Typography — Light: Clean & Neutral (Inter + DM Sans) */
+  --font-body: 'DM Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Inter', 'DM Sans', sans-serif;
+  --font-stat: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: var(--font-body);
+
+  /* Display sizing */
+  --font-page-title-size: 2.6rem;
+  --font-page-title-weight: 800;
+  --font-page-title-tracking: -0.03em;
+  --font-section-title-size: 1.4rem;
+  --font-section-title-weight: 700;
+  --font-section-title-tracking: -0.02em;
+  --font-stat-size: 2rem;
+  --font-stat-weight: 700;
+  --font-stat-tracking: -0.02em;
+}
+
+/* ──────────────────────────────────────────────────
+   DARK MODE · Near Black, Dark Charcoal, Bright Purple, Hot Pink, Lime, Orange, Sky Blue
+   ────────────────────────────────────────────────── */
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Backgrounds */
+  --bg-app: #0F0F12;           /* Near Black */
+  --bg-secondary: #18181B;     /* Dark Charcoal */
+  --bg-card: #18181B;          /* Dark Charcoal cards */
+  --bg-card-elevated: #222226; /* Elevated cards */
+  --bg-card-hover: #26262B;
+  --bg-input: #222226;
+  --bg-overlay: rgba(0, 0, 0, 0.7);
+
+  /* Primary Brand */
+  --color-primary: #A78BFA;         /* Bright Purple */
+  --color-primary-hover: #C4B5FD;
+  --color-secondary: #A78BFA;       /* Bright Purple */
+  --color-secondary-hover: #C4B5FD;
+  --color-secondary-subtle: #2E1065; /* Dark Purple tint */
+
+  /* Palette Accents */
+  --color-pink: #FB5BA7;          /* Hot Pink */
+  --color-lime: #B8F34A;          /* Lime */
+  --color-orange: #FF9B54;        /* Orange */
+  --color-sky: #4CC9F0;           /* Sky Blue */
+
+  /* Text */
+  --text-main: #FAFAFA;        /* Main text */
+  --text-secondary: #A1A1AA;   /* Secondary text */
+  --text-muted: #71717A;
+  --text-inverse: #0F0F12;
+
+  /* Semantic Mappings */
+  --color-warning: #FF9B54;           /* Orange */
+  --color-warning-subtle: rgba(255, 155, 84, 0.15);
+  --color-important: #FB5BA7;         /* Hot Pink */
+  --color-important-subtle: rgba(251, 91, 167, 0.15);
+  --color-success: #B8F34A;           /* Lime */
+  --color-success-subtle: rgba(184, 243, 74, 0.15);
+
+  /* Borders & Shadows */
+  --border-subtle: #27272A;
+  --border-medium: #3F3F46;
+  --border-primary: rgba(167, 139, 250, 0.25);
+  --border-accent: rgba(167, 139, 250, 0.35);
+
+  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
+
+  /* Typography — Dark: Sharp & Technical (Space Grotesk) */
+  --font-body: 'DM Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
+  --font-stat: 'Space Grotesk', monospace;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: var(--font-body);
+
+  /* Display sizing */
+  --font-page-title-size: 2.6rem;
+  --font-page-title-weight: 700;
+  --font-page-title-tracking: -0.025em;
+  --font-section-title-size: 1.4rem;
+  --font-section-title-weight: 700;
+  --font-section-title-tracking: -0.02em;
+  --font-stat-size: 2rem;
+  --font-stat-weight: 700;
+  --font-stat-tracking: -0.03em;
+
+  /* Pillar colors for dark mode */
+  --pillar-learn:   #A78BFA;  /* Bright Purple */
+  --pillar-build:   #4CC9F0;  /* Sky Blue */
+  --pillar-move:    #B8F34A;  /* Lime */
+  --pillar-connect: #FB5BA7;  /* Hot Pink */
+  --pillar-explore: #FF9B54;  /* Orange */
+  --pillar-rest:    #C084FC;  /* Light Purple */
+}
+
+/* ──────────────────────────────────────────────────
+   FUNKY MODE · Deep Space Neon — Dark bg, vivid neon accents
+   ────────────────────────────────────────────────── */
+[data-theme="funky"] {
+  color-scheme: dark;
+
+  /* Backgrounds */
+  --bg-app: #0B0914;            /* Deep Space Black */
+  --bg-secondary: #0F0C1C;      /* Slightly lighter black */
+  --bg-card: #151124;           /* Dark Card */
+  --bg-card-elevated: #1C1833;  /* Elevated card */
+  --bg-card-hover: #211E38;
+  --bg-input: #1C1833;
+  --bg-overlay: rgba(0, 0, 0, 0.75);
+
+  /* Primary Brand */
+  --color-primary: #A855F7;         /* Purple */
+  --color-primary-hover: #9333EA;
+  --color-secondary: #FF3CAC;       /* Hot Pink */
+  --color-secondary-hover: #E0219A;
+  --color-secondary-subtle: rgba(255, 60, 172, 0.15);
+
+  /* Palette Accents */
+  --color-pink: #FF3CAC;          /* Hot Pink */
+  --color-lime: #B7F34A;          /* Lime */
+  --color-orange: #FF7043;        /* Orange (kept for semantic warning) */
+  --color-sky: #22D3EE;           /* Cyan */
+  --color-yellow: #FFE66D;        /* Yellow */
+
+  /* Text */
+  --text-main: #F8F7FF;        /* Near White */
+  --text-secondary: #B8B5CC;   /* Muted Lavender */
+  --text-muted: #6E6A85;
+  --text-inverse: #0B0914;
+
+  /* Semantic Mappings */
+  --color-warning: #FFE66D;           /* Yellow */
+  --color-warning-subtle: rgba(255, 230, 109, 0.15);
+  --color-important: #FF3CAC;         /* Hot Pink */
+  --color-important-subtle: rgba(255, 60, 172, 0.18);
+  --color-success: #B7F34A;           /* Lime */
+  --color-success-subtle: rgba(183, 243, 74, 0.18);
+
+  /* Borders & Shadows — glowing neon feel */
+  --border-subtle: rgba(168, 85, 247, 0.18);
+  --border-medium: rgba(168, 85, 247, 0.32);
+  --border-primary: rgba(168, 85, 247, 0.45);
+  --border-accent: rgba(255, 60, 172, 0.4);
+
+  --shadow-sm: 0 2px 8px rgba(168, 85, 247, 0.12);
+  --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.4), 0 1px 4px rgba(168, 85, 247, 0.08);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(168, 85, 247, 0.12);
+  --shadow-lg: 0 18px 48px rgba(0, 0, 0, 0.6), 0 4px 16px rgba(168, 85, 247, 0.16);
+
+  /* Typography — Funky: Expressive & Gen-Z (Bricolage Grotesque + DM Sans + Space Grotesk) */
+  --font-body: 'DM Sans', sans-serif;
+  --font-display: 'Bricolage Grotesque', 'DM Sans', sans-serif;
+  --font-stat: 'Space Grotesk', monospace;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-sans: var(--font-body);
+
+  /* Display sizing — slightly larger & bolder for personality */
+  --font-page-title-size: 3rem;
+  --font-page-title-weight: 800;
+  --font-page-title-tracking: -0.01em;
+  --font-section-title-size: 1.6rem;
+  --font-section-title-weight: 700;
+  --font-section-title-tracking: -0.01em;
+  --font-stat-size: 2.4rem;
+  --font-stat-weight: 700;
+  --font-stat-tracking: -0.02em;
+
+  /* 6 Life Pillar Colors — neon mapped */
+  --pillar-learn:   #A855F7;  /* Purple */
+  --pillar-build:   #22D3EE;  /* Cyan */
+  --pillar-move:    #B7F34A;  /* Lime */
+  --pillar-connect: #FF3CAC;  /* Hot Pink */
+  --pillar-explore: #FF7043;  /* Orange */
+  --pillar-rest:    #FFE66D;  /* Yellow */
+
+  /* Radius */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 350ms cubic-bezier(0.16, 1, 0.3, 1);
+}
