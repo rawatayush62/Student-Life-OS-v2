@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build website
-        run: npm run build -- --base=/Student-Life-OS/
+        run: npm run build -- --base=/Student-Life-OS-v2/
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
