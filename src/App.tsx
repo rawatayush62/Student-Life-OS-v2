@@ -13,6 +13,7 @@ import { FreeTimeAdvisorModal } from './components/FreeTimeAdvisorModal';
 import { OnboardingModal } from './components/OnboardingModal';
 import './styles/main.css';
 import './styles/components.css';
+import './styles/brutalist.css';
 
 export const App: React.FC = () => {
   const {
